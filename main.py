@@ -17,12 +17,19 @@ def bhaskara(a, b, c):
         x2 = (-b - math.sqrt(delta)) / (2*a)
         return "Delta: " + str(delta) + ". As raízes são: " + str(x1) + " e " + str(x2)
 
+
 continuar = "s"
 
 while continuar.lower() == "s":
-    a = int(input("Insira o primeiro valor: "))
-    b = int(input("Insira o segundo valor: "))
-    c = int(input("Insira o terceiro valor: "))
+
+    try:
+        a = int(input("Insira o primeiro valor: "))
+        b = int(input("Insira o segundo valor: "))
+        c = int(input("Insira o terceiro valor: "))
+
+    except ValueError:
+        print("Erro: Não é permitido inserir letras ou números decimais. Tente novamente.")
+        continue   # reinicia o loop sem usar break
 
     resultado = bhaskara(a, b, c)
     print(resultado)
