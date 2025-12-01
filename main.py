@@ -29,7 +29,7 @@ while continuar.lower() == "s":
 
     except ValueError:
         print("Erro: Não é permitido inserir letras ou números decimais. Tente novamente.")
-        continue   # reinicia o loop sem usar break
+        continue
 
     resultado = bhaskara(a, b, c)
     print(resultado)
